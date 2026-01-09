@@ -21,5 +21,11 @@
     <ClCompile Include="Main.cpp">
       <Filter>File di risorse</Filter>
     </ClCompile>
+    <ClCompile Include="Lezione_1_Finestre.cpp">
+      <Filter>File di risorse</Filter>
+    </ClCompile>
+    <ClCompile Include="Lezione_2_Triangolo.cpp">
+      <Filter>File di risorse</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
