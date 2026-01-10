@@ -15,14 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lezione_1\glad.c">
+    <ClCompile Include="glad.c">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="Lezione_1\Lezione_1_Finestre.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="Lezione_1\Main.cpp">
-      <Filter>File di origine</Filter>
+    <ClCompile Include="Main.cpp">
+      <Filter>File di risorse</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -78,9 +78,27 @@ int run_Finestra_Colorata() {
 
     glfwSwapBuffers(window);
 
+    float time = float(glfwGetTime());
+    float rot = 0.0f;
+
     while (!glfwWindowShouldClose(window))
     {
+        // Aggiungere glfwSwapBuffers nel ciclo while genera un flickering dei colori della finestra
+        //glfwSwapBuffers(window);
+        
+        float curr_t = float(glfwGetTime());
+
+        if (curr_t - time > 0.1f )
+        {
+            rot += curr_t - time;
+            time = curr_t;
+        }
+
+        glClearColor(float(sin(rot))*0.7, float(cos(rot))*0.7, float(tan(rot))*0.7, 0.5f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glfwSwapBuffers(window);
         glfwPollEvents();
+        
     }
 
     glfwDestroyWindow(window);
