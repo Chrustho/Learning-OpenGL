@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\chris\source\repos\LearnOpenGL\Utils;$(SolutionDir)Libraries\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\lib</AdditionalLibraryDirectories>
