@@ -21,5 +21,8 @@
     <ClCompile Include="Main.cpp">
       <Filter>File di risorse</Filter>
     </ClCompile>
+    <ClCompile Include="Quadrato.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

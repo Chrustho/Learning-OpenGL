@@ -15,11 +15,9 @@ static const char* fragmentShaderSource = "#version 330 core\n"
 "   FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);\n"
 "}\n\0";
 
-int run_quadrato();
 
 
-
-int main()
+int run_quadrato()
 {
 	glfwInit();
 
@@ -62,19 +60,16 @@ int main()
 	// Coordinate dei vertici
 	GLfloat vertices[] =
 	{
-		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
-		0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
-		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f, // Upper corner
-		-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner left
-		0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner right
-		0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f // Inner down
+		-0.5f, -0.5f , 0.0f, // Lower left corner
+		-0.5f, 0.5f, 0.0f, // Lower right corner
+		0.5f, 0.5f, 0.0f, // Upper corner
+		0.5f, -0.5f, 0.0f // Inner down
 	};
 
 	GLuint indices[] =
 	{
-		0, 3, 5, // Triangolo in basso a sx
-		3, 2, 4, // Triangolo superiore
-		5, 4, 1 // Triangolo in basso a dx
+		0,1,2,
+		2,3,0
 	};
 
 	GLuint VAO, VBO, EBO;
@@ -106,7 +101,7 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
